@@ -84,7 +84,15 @@ tcp拥塞控制算法基于丢包的拥塞控制算法，
 
 tcp拥塞控制的缺点，bbr的优点  
 https://cloud.tencent.com/developer/article/1482633  
-
+http://kquic.com/2020/06/08/bbr%E5%9C%A8%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91%E9%A2%86%E5%9F%9F%E7%9A%84%E5%BA%94%E7%94%A8/  
+RTprop 链路的物理时延
+BtlBW 
+Bottleneck Bandwidth and Round-trip propagation time  瓶颈带宽和往返传播时间  
+BBR对所谓的“长肥网络”（带宽延迟积大、丢包率高的网络）非常有效  
+探测最大带宽和最小延时， 
+BBR 优缺点：
+缺点： BBR在丢包率达到25%以上，吞吐量会断崖式下降  
+BBR的最小RTT有个10s超时时间，在10s超时后，进入ProbeRTT 状态，并持续最小200ms，此状态下，为了排空拥塞，inflight只允许有4个包，这会导致音视频数据在这段时间内堆积在发送队列中，使得时延增加。  
 
 迅雷一面：  
 
